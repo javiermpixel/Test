@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "XRP"
+  },
+  {
+    "id": 2,
+    "name": "Bitcoin"
+  },
+  {
+    "id": 3,
+    "name": "Etherium"
+  },
+  {
+    "id": 4,
+    "name": "Dogecoin"
+  },
+  {
+    "id": 5,
+    "name": "Tether"
+  },
+  {
+    "id": 6,
+    "name": "Tron"
+  },
+  {
+    "id": 7,
+    "name": "Toncoin"
+  },
+  {
+    "id": 8,
+    "name": "Aptos"
+  },
+  {
+    "id": 9,
+    "name": "Cronos"
+  },
+  {
+    "id": 10,
+    "name": "Stellar"
+  },
+  {
+    "id": 11,
+    "name": "Kaspa"
+  },
+  {
+    "id": 12,
+    "name": "Sui"
+  },
+  {
+    "id": 13,
+    "name": "Flow"
+  },
+  {
+    "id": 14,
+    "name": "Apecoin"
+  }
+]
