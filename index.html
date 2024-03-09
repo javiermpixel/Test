@@ -9,11 +9,31 @@
     <title>Batatabit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/tablet.css" media="(min-width:820px)">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-brand">Batatabit</a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="moreDropdown" role="button">More <img src="./assets/icons/ArrowDropdown.svg" class="dropdown-arrow"></a>
+                    <div class="dropdown-menu" aria-labelledby="moreDropdown">
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="menu-icon" aria-label="Open Menu">
+                <img src="./assets/icons/ModernCircleMenu.svg" alt="Menu">
+            </button>        
+        </div>
+    </nav>    
+    
     <header>
         <img src="./assets/imgs/batatabit_logo_text.svg" alt="Batatabit Logo" width="150">
         <div class="header--title-container">
@@ -179,5 +199,6 @@
             <img src="assets/imgs/batatabit_2020.svg" alt="Logo de Batabit 2020" width="100">
         </section>
     </footer>
+    <script src="./js/main.js"></script>     
 </body>
 </html>

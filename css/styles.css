@@ -9,6 +9,7 @@
     --grey:#BABABA;
     --off_white: #faf8f7;
     --white: #ffff;
+    --font-lexend: 'Lexend', sans-serif;
 }
 
 *{
@@ -22,6 +23,104 @@ html{
     font-family: 'DM Sans', sans-serif;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+}
+
+
+.navbar {
+    background: #fff;
+    color: #000;
+    padding: 30px 150px;
+    font-family: var(--font-lexend);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--bitcoin_orange);
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    padding: 0 15px;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-nav .nav-item:nth-child(3) .nav-link{
+    padding: 10px 20px;
+    color: var(--bitcoin_orange);
+    border: solid 1px var(--bitcoin_orange);
+    background-color: #fff;
+    border-radius: 16px;
+    justify-content: space-between;
+    padding: 12px 24px 12px 24px;
+    height: 56px;
+}
+
+.navbar-nav .nav-item:nth-child(4) .nav-link{
+    display: flex;
+    padding: 10px 20px;
+    background-color: var(--bitcoin_orange);
+    border: solid 4px #F9B768;
+    color: #fff;
+    border-radius: 16px;
+    gap: 10px;
+    height: 57px;
+}
+
+.arrow-icon {
+    width: 1em; 
+    height: 1em; 
+    vertical-align: middle;
+    margin-left: 0.5em;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-arrow {
+    margin-left: 8px; 
+    width: 32px;
+    height: 32px;
+}
+.dropdown-toggle.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    display: none;
+}
+.dropdown-menu.show {
+    display: block;
+}
+.menu-icon {
+    display: none;
 }
 
 header{
