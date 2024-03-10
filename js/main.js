@@ -5,36 +5,48 @@ document.addEventListener('DOMContentLoaded', function () {
     var dropdownToggle = document.querySelector('.dropdown-toggle');
     var dropdownMenu = document.querySelector('.dropdown-menu');
 
-    // Event listener to toggle the menu
+    // toggle the menu
     menuIcon.addEventListener('click', function () {
         navbarNav.classList.add('show');
         closeIcon.style.display = 'block'; 
     });
 
-    // Event listener to close the menu
+    // close the menu
     closeIcon.addEventListener('click', function () {
         navbarNav.classList.remove('show');
         this.style.display = 'none'; 
     });
 
-    // Event listener to toggle dropdown items within the navbar
+    // toggle dropdown items within the navbar
     dropdownToggle.addEventListener('click', function (event) {
         event.preventDefault();
         dropdownMenu.classList.toggle('show');
         dropdownToggle.classList.toggle('active');
     });
 
-    // Fetch dropdown menu items from the JSON file
+    // fetch and populate the dropdown menu
     fetch('https://cdn.shopify.com/s/files/1/0593/0018/4179/files/menu.json?v=1709760796')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(item => {
-                const element = document.createElement('a');
-                element.setAttribute('href', item.url);
-                element.classList.add('dropdown-item');
-                element.textContent = item.label;
-                dropdownMenu.appendChild(element);
-            });
-        })
-        .catch(error => console.log('Error fetching menu:', error));
+    .then(response => response.json())
+    .then(data => {
+        // shuffle array using a shuffle algorithm
+        for (let i = data.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [data[i], data[j]] = [data[j], data[i]];
+        }
+        
+        // slice the first three items
+        const randomThreeItems = data.slice(0, 3);
+
+        // clear previous items
+        dropdownMenu.innerHTML = '';
+
+        // append new items to the dropdown
+        randomThreeItems.forEach(item => {
+            const element = document.createElement('a');
+            element.classList.add('dropdown-item');
+            element.textContent = item.name; 
+            dropdownMenu.appendChild(element);
+        });
+    })
+    .catch(error => console.log('Error fetching menu:', error));
 });
